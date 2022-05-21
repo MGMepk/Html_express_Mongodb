@@ -1,0 +1,44 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'media';
+
+// Create a new database.
+use(database);
+
+//db.movies.deleteOne({"id" : 2});
+
+// db.movies.aggregate([{
+//         $lookup: {
+//           from:"actors",
+//           localField: "id",
+//           foreignField: "id",
+//           as: "actores"
+//         }
+//       }, {$unwind:"$actores"},{
+//       $project: {
+//           "id":1,
+//           "title":1,
+//           "genres":1,
+//           "year":1,
+//           "director":1,
+//         "actores.actors":1
+//       }}])
+
+//db.movies.find({id:1});
+
+db.actors.updateOne(
+        { id: parseInt(3) },
+        {
+          $set: {
+            actors:  [
+        "Tim Robbins",
+        "Ricard el profe",
+        "Bob Gunton",
+        "William Sadler",
+        "Clancy Brown",
+        "Gil Bellows",
+      ],
+          },
+        }
+      );

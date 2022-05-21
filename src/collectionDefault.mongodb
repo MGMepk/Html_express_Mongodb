@@ -1,0 +1,136 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'media';
+
+// Create a new database.
+use(database);
+
+db.movies.drop();
+db.actors.drop();
+db.users.drop();
+
+// Create a new collection.
+//db.createCollection(collection);
+db.createCollection('movies');
+db.createCollection('actors');
+db.createCollection('users');
+
+db.movies.insertMany([
+  {
+    "id": 1,
+    "title": "The Shawshank Redemption",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "year": 1994,
+    "director": "Frank Darabont"
+  },
+  {
+    "id": 2,
+    "title": "The Godfather",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "year": 1972,
+    "director": "Francis Ford Coppola"
+  },
+  {
+    "id": 3,
+    "title": "The Godfather Part II",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "year": 1974,
+    "director": "Francis Ford Coppola"
+  },
+  {
+    "id": 4,
+    "title": "The Dark Knight",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "year": 2008,
+    "director": "Christopher Nolan"
+  },
+  {
+    "id": 5,
+    "title": "Schindler's List",
+    "genres": [
+      "Biography",
+      "Drama",
+      "History"
+    ],
+    "year": 1994,
+    "director": "Steven Spielberg"
+  }
+]
+  
+)
+
+db.actors.insertMany(
+  [
+  {
+    "id": 1,
+    "actors": [
+      "Tim Robbins",
+      "Morgan Freeman",
+      "Bob Gunton",
+      "William Sadler",
+      "Clancy Brown",
+      "Gil Bellows"
+    ]
+  },
+  {
+    "id": 2,
+    "actors": [
+      "Marlon Brando",
+      "Al Pacino",
+      "James Caan",
+      "Richard S. Castellano",
+      "Robert Duvall",
+      "Sterling Hayden"
+    ]
+  },
+  {
+    "id": 3,
+    "actors": [
+      "Al Pacino",
+      "Robert Duvall",
+      "Diane Keaton",
+      "Robert De Niro",
+      "John Cazale",
+      "Talia Shire"
+    ]
+  },
+  {
+    "id": 4,
+    "actors": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart",
+      "Michael Caine",
+      "Maggie Gyllenhaal",
+      "Gary Oldman"
+    ]
+  },
+  {
+    "id": 5,
+    "actors": [
+      "Liam Neeson",
+      "Ben Kingsley",
+      "Ralph Fiennes",
+      "Caroline Goodall",
+      "Jonathan Sagall",
+      "Embeth Davidtz"
+    ]
+  }
+]
+)
+

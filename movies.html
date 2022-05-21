@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies API</title>
+    <link rel="stylesheet" href="./src/moviesApi.css">
+    <script src="./src/movies.js" defer></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="form__title">Movies</h1>
+        <div class="form__input-group">
+            <button class="form__button" onclick="getMovies()" type="button">Get Movies</button>
+        </div>
+        <div class="form__input-group">
+            <button class="form__button" onclick="getMovieByID()" type="button">Get Movie by ID</button>
+            <input class="form__input" type="number" id="getId"/>
+        </div>
+        <div class="form__input-group">
+            <button class="form__button" onclick="updateMovie()" type="button">Update Movie</button>
+        </div>
+
+        <div class="form__input-group">
+            <button class="form__button" onclick="addMovie()" type="button">Add Movie</button>
+        </div>
+        
+        <div class="form__input-group">
+            <button class="form__button" onclick="deleteMovie()" type="button">Delete Movie</button>
+            <input class="form__input" type="number" id="deleteId" />
+        </div>
+        
+    </div>
+    <div class="movie_container">
+    <ol>
+
+
+    </ol>
+
+    </div>
+</body>
+
+</html>
